@@ -1,0 +1,24 @@
+<div class="container" *ngIf="profile$ | async as profile">
+  <h2>{{ profile.username }}</h2>
+
+  <table class="table mt-5">
+    <tbody>
+      <tr *ngIf="profile.firstName">
+        <th scope="row">First Name:</th>
+        <td>{{ profile.firstName }}</td>
+      </tr>
+      <tr *ngIf="profile.lastName">
+        <th scope="row">Last Name:</th>
+        <td>{{ profile.lastName }}</td>
+      </tr>
+      <tr *ngIf="profile.email">
+        <th scope="row">Email:</th>
+        <td>{{ profile.email }}</td>
+      </tr>
+      <tr [class.table-warning]="!profile.emailVerified">
+        <th scope="row">Email Verified:</th>
+        <td>{{ profile.emailVerified ? 'Yes' : 'No' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

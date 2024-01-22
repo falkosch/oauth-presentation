@@ -1,0 +1,64 @@
+<header class="container">
+  <div
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+  >
+    <div class="col-md-3 mb-2 mb-md-0 h4">The Online Bank</div>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <li>
+        <a [routerLink]="['/banking/overview']" class="nav-link px-2 link-secondary">
+          Financial Overview
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/brokerage/portfolio']" class="nav-link px-2"> Portfolio </a>
+      </li>
+    </ul>
+
+    <div class="col-md-3 text-end">
+      @if (isLoggedIn$ | async) {
+
+      <div class="btn-group" dropdown>
+        <button
+          id="profile-menu"
+          dropdownToggle
+          type="button"
+          class="btn btn-primary dropdown-toggle"
+          aria-controls="dropdown-profile-menu"
+        >
+          {{ username$ | async }} <span class="caret"></span>
+        </button>
+        <ul
+          id="dropdown-profile-menu"
+          *dropdownMenu
+          class="dropdown-menu"
+          role="menu"
+          aria-labelledby="profile-menu"
+        >
+          <li role="menuitem"><a class="dropdown-item" [routerLink]="['/profile']">Profile</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem">
+            <a data-test="logout" class="dropdown-item" (click)="logout()">Logout</a>
+          </li>
+        </ul>
+      </div>
+
+      } @else {
+
+      <button data-test="login" type="button" class="btn btn-outline-primary" (click)="login()">
+        Login
+      </button>
+
+      }
+    </div>
+  </div>
+</header>
+
+<main class="py-5">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="container small">
+  An OAuth client example, visit us on
+  <a href="https://github.com/falkosch/oauth-presentation">GitHub</a>
+</footer>

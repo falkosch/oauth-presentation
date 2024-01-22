@@ -1,0 +1,41 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "paths": {
+      "@the-online-bank/accounts-feature-financial-overview": [
+        "libs/accounts/feature/financial-overview/src/index.ts"
+      ],
+      "@the-online-bank/accounts-feature-turnover": ["libs/accounts/feature/turnover/src/index.ts"],
+      "@the-online-bank/brokerage-feature-portfolio": [
+        "libs/brokerage/feature/portfolio/src/index.ts"
+      ],
+      "@the-online-bank/settings-data-access": ["libs/settings/data-access/src/index.ts"],
+      "@the-online-bank/settings-feature-profile": ["libs/settings/feature/profile/src/index.ts"],
+      "@the-online-bank/shared-authentication-data-access": [
+        "libs/shared/authentication/data-access/src/index.ts"
+      ],
+      "@the-online-bank/shared-authentication-data-access-access-management": [
+        "libs/shared/authentication/data-access-access-management/src/index.ts"
+      ],
+      "@the-online-bank/shared-authentication-data-access-keycloak": [
+        "libs/shared/authentication/data-access-keycloak/src/index.ts"
+      ],
+      "@the-online-bank/shared-util/testing": ["libs/shared/util/testing/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
