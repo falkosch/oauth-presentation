@@ -5,15 +5,12 @@ import { filter, map, of, switchMap } from 'rxjs';
 import { SessionQuery } from '@the-online-bank/shared-authentication-data-access';
 
 import { AuthenticationService } from '../services/authentication.service';
-
-const isApiUrl = (url: string) => {
-  return ['http://localhost:8080/realms/customer/account'].some((apiPrefix) =>
-    url.startsWith(apiPrefix)
-  );
-};
+import { AuthenticationFilterService } from '../services/authentication-filter.service';
 
 export const addBearerTokenInterceptor: HttpInterceptorFn = (req, next) => {
-  if (!isApiUrl(req.url)) {
+  const authenticationFilterService = inject(AuthenticationFilterService);
+
+  if (authenticationFilterService.isUnprotected(req.url)) {
     return next(req);
   }
   if (req.headers.has('Authorization')) {

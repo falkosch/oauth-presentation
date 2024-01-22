@@ -7,6 +7,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import {
   addBearerTokenInterceptor,
+  logoutOnApiAuthenticationErrorInterceptor,
   provideAuthenticationInitializer,
 } from '@the-online-bank/shared-authentication-data-access-access-management';
 
@@ -18,7 +19,9 @@ bootstrapApplication(AppComponent, {
     provideZoneChangeDetection({ eventCoalescing: true, runCoalescing: true }),
     provideAnimations(),
     provideRouter(APP_ROUTES, withHashLocation()),
-    provideHttpClient(withInterceptors([addBearerTokenInterceptor])),
+    provideHttpClient(
+      withInterceptors([addBearerTokenInterceptor, logoutOnApiAuthenticationErrorInterceptor])
+    ),
 
     importProvidersFrom(BsDropdownModule.forRoot()),
 
