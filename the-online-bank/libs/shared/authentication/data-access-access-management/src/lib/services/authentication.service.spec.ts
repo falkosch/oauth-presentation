@@ -21,14 +21,10 @@ describe('AuthenticationService', () => {
   let service: AuthenticationService;
 
   beforeEach(() =>
-    MockBuilder(AuthenticationService)
-      .mock(KeycloakService, {
-        login: jest.fn().mockReturnValue(of(givenAccessToken)),
-        logout: jest.fn().mockReturnValue(EMPTY),
-      })
-      .mock(AccessTokenService, {
-        consume: jest.fn(),
-      })
+    MockBuilder(AuthenticationService).mock(KeycloakService, {
+      login: jest.fn().mockReturnValue(of(givenAccessToken)),
+      logout: jest.fn().mockReturnValue(EMPTY),
+    })
   );
 
   beforeEach(() => {
@@ -48,9 +44,6 @@ describe('AuthenticationService', () => {
 
       expect(keycloakServiceMock.login).toHaveBeenCalledWith(givenReturnUrl);
       expect(keycloakServiceMock.login).toHaveBeenCalledTimes(1);
-
-      expect(accessTokenServiceMock.consume).toHaveBeenCalledWith(givenAccessToken);
-      expect(accessTokenServiceMock.consume).toHaveBeenCalledTimes(1);
     });
 
     it('should consume fetched access token', () => {

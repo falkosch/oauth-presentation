@@ -10,7 +10,7 @@ import { AuthenticationService } from '../services/authentication.service';
 export const authenticatedGuard: CanActivateFn = (route, state): Observable<boolean> => {
   const authenticationService = inject(AuthenticationService);
 
-  const baseUrl = inject(DOCUMENT).baseURI;
+  const { baseURI } = inject(DOCUMENT);
   const routeRelativeUrl = inject(Location).prepareExternalUrl(state.url);
 
   return inject(SessionQuery).isLoggedIn$.pipe(
@@ -19,7 +19,7 @@ export const authenticatedGuard: CanActivateFn = (route, state): Observable<bool
         return of(true);
       }
 
-      return authenticationService.login(`${baseUrl}${routeRelativeUrl}`);
+      return authenticationService.login(`${baseURI}${routeRelativeUrl}`);
     })
   );
 };

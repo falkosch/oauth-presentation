@@ -16,13 +16,7 @@ describe('KeycloakService', () => {
   let keycloakApiServiceMock: KeycloakApiService;
   let service: KeycloakService;
 
-  beforeEach(() =>
-    MockBuilder(KeycloakService).mock(KeycloakApiService, {
-      initialize: jest.fn(),
-      login: jest.fn(),
-      logout: jest.fn(),
-    })
-  );
+  beforeEach(() => MockBuilder(KeycloakService));
 
   beforeEach(() => {
     MockRender(KeycloakService);

@@ -17,11 +17,7 @@ describe('AccessTokenService', () => {
   let sessionStoreMock: SessionStore;
   let service: AccessTokenService;
 
-  beforeEach(() =>
-    MockBuilder(AccessTokenService).mock(SessionStore, {
-      setBearerTokenAndTokenClaims: jest.fn(),
-    })
-  );
+  beforeEach(() => MockBuilder(AccessTokenService));
 
   beforeEach(() => {
     MockRender(AccessTokenService);

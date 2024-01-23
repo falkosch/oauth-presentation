@@ -26,9 +26,6 @@ describe('provideAuthenticationInitializer', () => {
     beforeEach(() =>
       MockBuilder()
         .provide(provideAuthenticationInitializer())
-        .mock(AccessTokenService, {
-          consume: jest.fn(),
-        })
         .mock(KeycloakService, {
           initialize: jest.fn().mockReturnValue(of(givenAccessToken)),
         })
@@ -57,9 +54,6 @@ describe('provideAuthenticationInitializer', () => {
     beforeEach(() =>
       MockBuilder()
         .provide(provideAuthenticationInitializer())
-        .mock(AccessTokenService, {
-          consume: jest.fn(),
-        })
         .mock(KeycloakService, {
           initialize: jest.fn().mockReturnValue(of(null)),
         })
@@ -87,11 +81,8 @@ describe('provideAuthenticationInitializer', () => {
     beforeEach(() =>
       MockBuilder()
         .provide(provideAuthenticationInitializer())
-        .mock(AccessTokenService, {
-          consume: jest.fn(),
-        })
         .mock(KeycloakService, {
-          initialize: jest.fn().mockReturnValue(throwError(new Error('test'))),
+          initialize: jest.fn().mockReturnValue(throwError(() => new Error('test'))),
         })
     );
 
