@@ -1,6 +1,6 @@
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
-import { filter, map, of, switchMap } from 'rxjs';
+import { filter, map, of, switchMap, take } from 'rxjs';
 
 import { SessionQuery } from '@the-online-bank/shared-authentication-data-access';
 
@@ -21,12 +21,14 @@ export const addBearerTokenInterceptor: HttpInterceptorFn = (req, next) => {
   const sessionQuery = inject(SessionQuery);
 
   const awaitBearerToken$ = sessionQuery.bearerToken$.pipe(
+    take(1),
     switchMap((bearerToken) => {
       if (bearerToken) {
         return of(bearerToken);
       }
       return authenticationService.login().pipe(
         switchMap(() => sessionQuery.bearerToken$),
+        take(1),
         filter(Boolean)
       );
     })

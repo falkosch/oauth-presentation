@@ -16,10 +16,10 @@ describe('authenticatedGuard', () => {
   let authenticationServiceMock: AuthenticationService;
 
   let routerHarness: RouterTestingHarness;
-  let isLoggedIn$: Subject<boolean>;
+  let isLoggedIn$Mock: Subject<boolean>;
 
   beforeEach(() => {
-    isLoggedIn$ = new ReplaySubject(1);
+    isLoggedIn$Mock = new ReplaySubject(1);
 
     return MockBuilder()
       .provide(
@@ -32,7 +32,9 @@ describe('authenticatedGuard', () => {
         ])
       )
       .keep(RouterTestingModule.withRoutes([]))
-      .mock(SessionQuery, { isLoggedIn$ })
+      .mock(SessionQuery, {
+        isLoggedIn$: isLoggedIn$Mock,
+      })
       .mock(AuthenticationService, {
         login: jest.fn().mockReturnValue(of(true)),
       });
@@ -44,7 +46,7 @@ describe('authenticatedGuard', () => {
   });
 
   it('should passthrough when user is logged in', async () => {
-    isLoggedIn$.next(true);
+    isLoggedIn$Mock.next(true);
 
     await routerHarness.navigateByUrl('foobar');
 
@@ -53,7 +55,7 @@ describe('authenticatedGuard', () => {
 
   describe('when user is not logged in', () => {
     it('should trigger login with return url', async () => {
-      isLoggedIn$.next(false);
+      isLoggedIn$Mock.next(false);
 
       await routerHarness.navigateByUrl('foobar');
 

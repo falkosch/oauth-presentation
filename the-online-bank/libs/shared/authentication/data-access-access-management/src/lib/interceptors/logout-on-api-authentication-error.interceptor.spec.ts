@@ -1,15 +1,16 @@
 import { HttpErrorResponse, HttpEventType, HttpRequest } from '@angular/common/http';
 import { Injector, runInInjectionContext } from '@angular/core';
 import { MockBuilder, ngMocks } from 'ng-mocks';
-import { NEVER, of, ReplaySubject, Subject, throwError } from 'rxjs';
+import { of, throwError } from 'rxjs';
 
-import { SessionQuery } from '@the-online-bank/shared-authentication-data-access';
 import { runInTestScheduler } from '@the-online-bank/shared-util/testing';
 
 import { AuthenticationService } from '../services/authentication.service';
 import { logoutOnApiAuthenticationErrorInterceptor } from './logout-on-api-authentication-error.interceptor';
 
 describe('logoutOnApiAuthenticationErrorInterceptor', () => {
+  const givenResponse = { type: HttpEventType.Sent };
+
   const expectedLogoutError = (cause: unknown) =>
     new Error('logout due to api authentication error', { cause });
 
@@ -18,22 +19,15 @@ describe('logoutOnApiAuthenticationErrorInterceptor', () => {
   let authenticationServiceMock: AuthenticationService;
   let requestMock: HttpRequest<unknown>;
 
-  let isLoggedIn$: Subject<boolean>;
-
-  beforeEach(() => {
-    isLoggedIn$ = new ReplaySubject(1);
-
-    return MockBuilder()
-      .mock(HttpRequest)
-      .mock(SessionQuery, {
-        isLoggedIn$,
-      })
+  beforeEach(() =>
+    MockBuilder()
       .mock(AuthenticationService, {
         logout: jest.fn().mockReturnValue(of(undefined)),
-      });
-  });
+      })
+      .mock(HttpRequest)
+  );
 
-  beforeEach(async () => {
+  beforeEach(() => {
     authenticationServiceMock = ngMocks.get(AuthenticationService);
     requestMock = ngMocks.get(HttpRequest);
   });
@@ -44,7 +38,7 @@ describe('logoutOnApiAuthenticationErrorInterceptor', () => {
     );
 
   it('should pass request to the next function', () => {
-    nextMock.mockReturnValue(NEVER);
+    nextMock.mockReturnValue(of(givenResponse));
 
     invokeInterceptor();
 
@@ -53,7 +47,6 @@ describe('logoutOnApiAuthenticationErrorInterceptor', () => {
   });
 
   it('should passthrough non-errors', () => {
-    const givenResponse = { type: HttpEventType.Sent };
     nextMock.mockReturnValue(of(givenResponse));
 
     runInTestScheduler(({ expectObservable }) => {

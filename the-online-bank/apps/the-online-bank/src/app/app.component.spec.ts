@@ -9,22 +9,22 @@ import { AuthenticationService } from '@the-online-bank/shared-authentication-da
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
-  let isLoggedIn$: Subject<boolean>;
-  let name$: Subject<string>;
+  let isLoggedIn$Mock: Subject<boolean>;
+  let name$Mock: Subject<string>;
 
   let authenticationServiceMock: AuthenticationService;
   let fixture: MockedComponentFixture<AppComponent>;
 
   beforeEach(() => {
-    isLoggedIn$ = new BehaviorSubject(false);
-    name$ = new ReplaySubject(1);
+    isLoggedIn$Mock = new BehaviorSubject(false);
+    name$Mock = new ReplaySubject(1);
 
     return MockBuilder(AppComponent)
       .provide(provideNoopAnimations())
       .keep(BsDropdownModule)
       .mock(SessionQuery, {
-        isLoggedIn$,
-        name$,
+        isLoggedIn$: isLoggedIn$Mock,
+        name$: name$Mock,
       })
       .mock(AuthenticationService, {
         login: jest.fn().mockReturnValue(of(true)),
@@ -50,7 +50,7 @@ describe('AppComponent', () => {
   });
 
   it('should allow to logout via dropdown when logged in', () => {
-    isLoggedIn$.next(true);
+    isLoggedIn$Mock.next(true);
     fixture.detectChanges();
 
     const profileMenuDropdown = ngMocks.find('#profile-menu');
