@@ -1,4 +1,6 @@
-<div class="container" *ngIf="turnover$ | async as turnover">
+@if(turnover$ | async; as turnover) {
+
+<div class="container">
   <a routerLink="../../overview">Back</a>
 
   <h2>{{ turnover.name }}</h2>
@@ -10,6 +12,7 @@
 
   <ul class="list-group mt-5">
     @for (transaction of turnover.transactions; track $index) {
+
     <li class="list-group-item">
       <div class="row">
         <div class="col-auto">{{ transaction.date | date : 'mediumDate' }}</div>
@@ -19,8 +22,13 @@
         </div>
       </div>
     </li>
+
     } @empty {
+
     <div class="h5 text-center">No transactions yet</div>
+
     }
   </ul>
 </div>
+
+}
