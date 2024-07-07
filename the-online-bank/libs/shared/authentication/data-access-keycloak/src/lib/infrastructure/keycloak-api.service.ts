@@ -16,6 +16,7 @@ export class KeycloakApiService {
     return defer(() =>
       this.keycloak.init({
         redirectUri: 'http://localhost:4200/',
+        onLoad: 'check-sso',
       })
     ).pipe(map(() => this.getAccessTokenOrNull()));
   }
