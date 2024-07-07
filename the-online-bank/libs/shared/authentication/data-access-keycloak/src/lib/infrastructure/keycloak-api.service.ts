@@ -17,6 +17,7 @@ export class KeycloakApiService {
       this.keycloak.init({
         redirectUri: 'http://localhost:4200/',
         onLoad: 'check-sso',
+        pkceMethod: 'S256',
       })
     ).pipe(map(() => this.getAccessTokenOrNull()));
   }
