@@ -1,0 +1,60 @@
+<mxfile host="app.diagrams.net" modified="2024-07-09T00:55:00.573Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="YzQREpOgobW4d46LhDl3" version="24.6.4" type="device">
+  <diagram name="Seite-1" id="BAuRF0Urq9oWF-A2XyVz">
+    <mxGraphModel dx="1717" dy="893" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jisPjVKA86o9KqslHkJf-15" style="startArrow=none;endArrow=block;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="jisPjVKA86o9KqslHkJf-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="2" target="jisPjVKA86o9KqslHkJf-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2" value="Access Management" style="whiteSpace=wrap;strokeWidth=2;glass=1;sketch=1;curveFitting=1;jiggle=2;rounded=1;shadow=1;" parent="1" vertex="1">
+          <mxGeometry x="204" y="100" width="142" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-14" value="ID Management" style="whiteSpace=wrap;strokeWidth=2;glass=1;sketch=1;curveFitting=1;jiggle=2;rounded=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="268" width="142" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-17" value="Directory Services" style="rounded=1;whiteSpace=wrap;html=1;glass=1;sketch=1;curveFitting=1;jiggle=2;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="60" y="250" width="370" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-19" value="Identity Store" style="whiteSpace=wrap;strokeWidth=2;glass=1;sketch=1;curveFitting=1;jiggle=2;rounded=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="262" y="269.9975" width="142" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-20" value="Config Store" style="whiteSpace=wrap;strokeWidth=2;glass=1;sketch=1;curveFitting=1;jiggle=2;rounded=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="269.9975" width="142" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-21" value="" style="html=1;aspect=fixed;strokeColor=none;shadow=1;fillColor=#3B8DF1;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;shape=mxgraph.gcp2.database_3;" vertex="1" parent="1">
+          <mxGeometry x="506" y="300" width="70" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-22" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=1;fillColor=#3B8DF1;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;shape=mxgraph.gcp2.database_3" vertex="1" parent="1">
+          <mxGeometry x="116" y="300" width="70" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-23" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=1;fillColor=#3B8DF1;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;shape=mxgraph.gcp2.database_3" vertex="1" parent="1">
+          <mxGeometry x="298" y="300" width="70" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-24" value="Token Store" style="whiteSpace=wrap;strokeWidth=2;glass=1;sketch=1;curveFitting=1;jiggle=2;rounded=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="470" y="99.9975" width="142" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-25" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=1;fillColor=#3B8DF1;verticalAlign=top;labelPosition=center;verticalLabelPosition=bottom;shape=mxgraph.gcp2.database_3" vertex="1" parent="1">
+          <mxGeometry x="506" y="130" width="70" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="" style="startArrow=none;endArrow=block;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="jisPjVKA86o9KqslHkJf-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="170" y="110" as="sourcePoint" />
+            <mxPoint x="147.5" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="" style="startArrow=none;endArrow=block;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="2" target="jisPjVKA86o9KqslHkJf-19" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jisPjVKA86o9KqslHkJf-26" style="startArrow=block;endArrow=block;dashed=1;" edge="1" parent="1" source="jisPjVKA86o9KqslHkJf-14" target="jisPjVKA86o9KqslHkJf-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
