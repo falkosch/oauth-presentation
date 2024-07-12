@@ -1,0 +1,181 @@
+<mxfile host="Electron" modified="2024-07-11T00:05:45.880Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="xW7JHqFvFwcX-JyFIUw1" version="24.6.4" type="device">
+  <diagram name="Page-1" id="b520641d-4fe3-3701-9064-5fc419738815">
+    <mxGraphModel dx="599" dy="965" grid="1" gridSize="10" guides="1" tooltips="0" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-54" value="" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="xqFDO-GilH0IYdXBh0oD-59" target="xqFDO-GilH0IYdXBh0oD-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="261.5238095238095" y="578.0000000000001" as="sourcePoint" />
+            <mxPoint x="595" y="543.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="262" y="550" />
+              <mxPoint x="530" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-73" value="&amp;lt;relationship&amp;gt;&lt;br&gt;savings account of child" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="xqFDO-GilH0IYdXBh0oD-54" vertex="1" connectable="0">
+          <mxGeometry x="-0.5294" y="4" relative="1" as="geometry">
+            <mxPoint x="43" y="4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-2" value="BankContext" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.documents;spacing=0;strokeColor=none;fillColor=#505050;" parent="1" vertex="1">
+          <mxGeometry x="120" y="368" width="46" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-21" value="" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" source="xqFDO-GilH0IYdXBh0oD-2" target="xqFDO-GilH0IYdXBh0oD-45" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="229.5" y="286.5" as="sourcePoint" />
+            <mxPoint x="227" y="223.1198501872659" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="143" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-23" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;fontSize=16;" parent="xqFDO-GilH0IYdXBh0oD-21" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-27" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="xqFDO-GilH0IYdXBh0oD-43" target="xqFDO-GilH0IYdXBh0oD-45" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="374" y="211" as="sourcePoint" />
+            <mxPoint x="286" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-28" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;fontSize=16;" parent="xqFDO-GilH0IYdXBh0oD-27" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-14" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-29" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;fontSize=16;" parent="xqFDO-GilH0IYdXBh0oD-27" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint x="14" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-30" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="xqFDO-GilH0IYdXBh0oD-2" target="xqFDO-GilH0IYdXBh0oD-61" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="300" as="sourcePoint" />
+            <mxPoint x="227" y="390.0728744939271" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-31" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=left;verticalAlign=bottom;fontSize=16;" parent="xqFDO-GilH0IYdXBh0oD-30" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-33" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="xqFDO-GilH0IYdXBh0oD-61" target="xqFDO-GilH0IYdXBh0oD-39" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="286" y="397" as="sourcePoint" />
+            <mxPoint x="380" y="368" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-35" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;fontSize=16;" parent="xqFDO-GilH0IYdXBh0oD-33" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-38" value="BankProduct" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.document_shared;spacing=0;" parent="1" vertex="1">
+          <mxGeometry x="355" y="460" width="52" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-39" value="BankAccount" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#82b366;fillColor=#d5e8d4;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;outlineConnect=0;align=center;shape=mxgraph.office.concepts.book_journal;" parent="1" vertex="1">
+          <mxGeometry x="360" y="370.5" width="41" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-40" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="xqFDO-GilH0IYdXBh0oD-39" target="xqFDO-GilH0IYdXBh0oD-38" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="460" as="sourcePoint" />
+            <mxPoint x="373" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-42" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;fontSize=16;" parent="xqFDO-GilH0IYdXBh0oD-40" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-43" value="AccountInformation" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#82b366;fillColor=#d5e8d4;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.contacts;spacing=0;" parent="1" vertex="1">
+          <mxGeometry x="340" y="200" width="53" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-45" value="BankCustomer" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.user;spacing=0;" parent="1" vertex="1">
+          <mxGeometry x="233.5" y="234.5" width="46" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-47" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="xqFDO-GilH0IYdXBh0oD-61" target="xqFDO-GilH0IYdXBh0oD-59" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="256.4999999999999" y="425" as="sourcePoint" />
+            <mxPoint x="256.4999999999999" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-48" value="1" style="resizable=0;html=1;whiteSpace=wrap;align=right;verticalAlign=bottom;fontSize=16;" parent="xqFDO-GilH0IYdXBh0oD-47" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-50" value="" style="endArrow=none;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" source="xqFDO-GilH0IYdXBh0oD-39" target="xqFDO-GilH0IYdXBh0oD-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="391" y="432" as="sourcePoint" />
+            <mxPoint x="550" y="397" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-72" value="&amp;lt;attribute&amp;gt;&lt;br&gt;under&lt;br&gt;liquidation" style="edgeLabel;html=1;align=center;verticalAlign=bottom;resizable=0;points=[];labelBackgroundColor=default;labelPosition=center;verticalLabelPosition=top;" parent="xqFDO-GilH0IYdXBh0oD-50" vertex="1" connectable="0">
+          <mxGeometry x="-0.0366" y="1" relative="1" as="geometry">
+            <mxPoint x="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-52" value="" style="endArrow=none;html=1;rounded=0;" parent="1" source="xqFDO-GilH0IYdXBh0oD-38" target="xqFDO-GilH0IYdXBh0oD-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="411" y="407" as="sourcePoint" />
+            <mxPoint x="550" y="406.04521276595744" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-55" value="&amp;lt;role&amp;gt;" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" target="xqFDO-GilH0IYdXBh0oD-60" edge="1">
+          <mxGeometry x="-0.0644" y="-20" relative="1" as="geometry">
+            <mxPoint x="279" y="270" as="sourcePoint" />
+            <mxPoint x="550" y="371" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-59" value="BankAccountHolderType" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;labelPosition=left;verticalLabelPosition=middle;verticalAlign=middle;outlineConnect=0;align=right;shape=mxgraph.office.security.role_group;" parent="1" vertex="1">
+          <mxGeometry x="227" y="458.5" width="59" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-60" value="Privilege" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=right;verticalLabelPosition=middle;verticalAlign=middle;outlineConnect=0;align=left;shape=mxgraph.office.security.key_permissions;" parent="1" vertex="1">
+          <mxGeometry x="520" y="371" width="25" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-61" value="BankAccountHolder" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;outlineConnect=0;align=center;shape=mxgraph.office.security.lock_with_key_security;" parent="1" vertex="1">
+          <mxGeometry x="233" y="366" width="47" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-63" value="&amp;lt;relationship&amp;gt;&lt;br&gt;joined accounts" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" source="xqFDO-GilH0IYdXBh0oD-61" target="xqFDO-GilH0IYdXBh0oD-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="417" y="473" as="sourcePoint" />
+            <mxPoint x="480" y="416" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="320" y="395" />
+              <mxPoint x="320" y="330" />
+              <mxPoint x="500" y="330" />
+              <mxPoint x="500" y="398" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-64" value="BankEmployee" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.users.user;spacing=0;" parent="1" vertex="1">
+          <mxGeometry x="600" y="234.5" width="46" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-66" value="&amp;lt;role&amp;gt;" style="endArrow=none;html=1;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" source="xqFDO-GilH0IYdXBh0oD-60" target="xqFDO-GilH0IYdXBh0oD-64" edge="1">
+          <mxGeometry x="0.5531" y="-20" relative="1" as="geometry">
+            <mxPoint x="411" y="405" as="sourcePoint" />
+            <mxPoint x="480" y="405" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="533" y="380" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-70" value="" style="endArrow=none;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;edgeStyle=orthogonalEdgeStyle;curved=1;" parent="1" source="xqFDO-GilH0IYdXBh0oD-43" target="xqFDO-GilH0IYdXBh0oD-60" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="411" y="405" as="sourcePoint" />
+            <mxPoint x="480" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqFDO-GilH0IYdXBh0oD-71" value="&amp;lt;attribute&amp;gt;&lt;br&gt;legal age" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" parent="xqFDO-GilH0IYdXBh0oD-70" vertex="1" connectable="0">
+          <mxGeometry x="-0.0129" y="-27" relative="1" as="geometry">
+            <mxPoint x="5" y="23" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

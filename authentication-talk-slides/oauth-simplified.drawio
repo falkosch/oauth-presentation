@@ -1,0 +1,159 @@
+<mxfile host="Electron" modified="2024-07-11T22:44:10.771Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="ElRJdKRuc4JWE6evOsLA" version="24.6.4" type="device">
+  <diagram name="Seite-1" id="-Ce6UastXVxnx9hMV_J5">
+    <mxGraphModel dx="807" dy="465" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-13" value="7) Resource request with access token" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=default;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#6C8EBF;" parent="1" source="NlBi3n7xhsbLsqc2Mnb0-4" target="nYWo8sa4pcQ7O2iAQIdF-5" edge="1">
+          <mxGeometry x="0.619" y="30" relative="1" as="geometry">
+            <mxPoint x="660" y="300" as="sourcePoint" />
+            <mxPoint x="595" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="290" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-15" value="*7) Verify access token signature&lt;br&gt;with public key" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=default;fillColor=#dae8fc;strokeColor=#6c8ebf;fontColor=#6C8EBF;endArrow=none;endFill=0;dashed=1;" parent="1" source="nYWo8sa4pcQ7O2iAQIdF-5" target="NlBi3n7xhsbLsqc2Mnb0-17" edge="1">
+          <mxGeometry x="-0.1709" relative="1" as="geometry">
+            <mxPoint x="700" y="350" as="sourcePoint" />
+            <mxPoint x="730" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="830" y="330" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nYWo8sa4pcQ7O2iAQIdF-5" value="Resource&lt;br&gt;Server" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.server_rack;labelPosition=center;" parent="1" vertex="1">
+          <mxGeometry x="653" y="320" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-2" value="Authorization&lt;br&gt;Server" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Security.svg;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;" parent="1" vertex="1">
+          <mxGeometry x="657.14" y="160" width="41.71" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-5" value="Access resource" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.956;exitY=0.847;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;endArrow=none;endFill=0;dashed=1;" parent="1" source="NlBi3n7xhsbLsqc2Mnb0-3" target="NlBi3n7xhsbLsqc2Mnb0-4" edge="1">
+          <mxGeometry x="-0.0797" y="7" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="463" y="202" />
+              <mxPoint x="463" y="280" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-3" value="Resource&lt;br&gt;Owner" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/identity/Users.svg;labelPosition=center;verticalLabelPosition=top;verticalAlign=bottom;" parent="1" vertex="1">
+          <mxGeometry x="380" y="160" width="45.71" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-4" value="Client" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/intune/Client_Apps.svg;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="535" y="255" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-7" value="1) Authorize request" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#D79B00;" parent="1" source="NlBi3n7xhsbLsqc2Mnb0-4" target="NlBi3n7xhsbLsqc2Mnb0-2" edge="1">
+          <mxGeometry x="-0.1258" y="-10" relative="1" as="geometry">
+            <mxPoint x="384" y="212" as="sourcePoint" />
+            <mxPoint x="590" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="550" y="200" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-8" value="2) Presents request" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#82B366;" parent="1" source="NlBi3n7xhsbLsqc2Mnb0-2" target="NlBi3n7xhsbLsqc2Mnb0-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="657.1399999999999" y="200" as="sourcePoint" />
+            <mxPoint x="375.71000000000004" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="520" y="190" />
+              <mxPoint x="520" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-9" value="3) Authenticates &amp;amp; consents" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;fillColor=#d5e8d4;strokeColor=#82b366;fontColor=#82B366;" parent="1" source="NlBi3n7xhsbLsqc2Mnb0-3" target="NlBi3n7xhsbLsqc2Mnb0-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="667" y="200" as="sourcePoint" />
+            <mxPoint x="540" y="130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="520" y="170" />
+              <mxPoint x="520" y="170" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-12" value="6) Signed tokens incl. access token" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=default;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#9673A6;" parent="1" source="NlBi3n7xhsbLsqc2Mnb0-2" target="NlBi3n7xhsbLsqc2Mnb0-4" edge="1">
+          <mxGeometry x="-0.2727" relative="1" as="geometry">
+            <mxPoint x="595" y="270" as="sourcePoint" />
+            <mxPoint x="700" y="220" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="280" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-11" value="5) Get tokens with authorization code&amp;nbsp;" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=default;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#9673A6;" parent="1" source="NlBi3n7xhsbLsqc2Mnb0-4" target="NlBi3n7xhsbLsqc2Mnb0-2" edge="1">
+          <mxGeometry x="0.4074" y="-10" relative="1" as="geometry">
+            <mxPoint x="680" y="220" as="sourcePoint" />
+            <mxPoint x="680" y="270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="670" y="260" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-10" value="4) Authorization code" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=default;fillColor=#ffe6cc;strokeColor=#d79b00;fontColor=#D79B00;" parent="1" source="NlBi3n7xhsbLsqc2Mnb0-2" target="NlBi3n7xhsbLsqc2Mnb0-4" edge="1">
+          <mxGeometry x="0.12" y="-10" relative="1" as="geometry">
+            <mxPoint x="480" y="90" as="sourcePoint" />
+            <mxPoint x="761" y="90" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="240" />
+              <mxPoint x="570" y="240" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-16" value="8) Resource response" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=default;fontColor=#6C8EBF;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" source="nYWo8sa4pcQ7O2iAQIdF-5" target="NlBi3n7xhsbLsqc2Mnb0-4" edge="1">
+          <mxGeometry x="-0.087" y="-10" relative="1" as="geometry">
+            <mxPoint x="700" y="370" as="sourcePoint" />
+            <mxPoint x="713" y="380" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="350" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-17" value="jwks" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Keys.svg;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="800" y="147" width="72" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="NlBi3n7xhsbLsqc2Mnb0-18" value="*5) Sign tokens&lt;br&gt;with private key" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=default;fillColor=#e1d5e7;strokeColor=#9673a6;fontColor=#9673A6;endArrow=none;endFill=0;dashed=1;" parent="1" source="NlBi3n7xhsbLsqc2Mnb0-2" target="NlBi3n7xhsbLsqc2Mnb0-17" edge="1">
+          <mxGeometry x="-0.0971" relative="1" as="geometry">
+            <mxPoint x="690" y="220" as="sourcePoint" />
+            <mxPoint x="595" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="750" y="185" />
+              <mxPoint x="750" y="185" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xy2AyUUsLcD-fLOW3iBJ-1" value="Resources" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/general/All_Resources.svg;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="740" y="350" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xy2AyUUsLcD-fLOW3iBJ-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#d5e8d4;strokeColor=#82b366;endArrow=diamond;endFill=1;" edge="1" parent="1" source="xy2AyUUsLcD-fLOW3iBJ-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xy2AyUUsLcD-fLOW3iBJ-3" value="Scopes" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#82b366;fillColor=#d5e8d4;labelPosition=center;verticalLabelPosition=middle;verticalAlign=middle;outlineConnect=0;align=center;shape=mxgraph.office.security.key_permissions;labelBackgroundColor=default;" vertex="1" parent="1">
+          <mxGeometry x="567" y="90" width="25" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="xy2AyUUsLcD-fLOW3iBJ-5" value="" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;edgeStyle=orthogonalEdgeStyle;labelBackgroundColor=default;fontColor=#6C8EBF;fillColor=#dae8fc;strokeColor=#6c8ebf;endArrow=none;endFill=0;startArrow=diamondThin;startFill=0;" edge="1" parent="1" source="nYWo8sa4pcQ7O2iAQIdF-5" target="xy2AyUUsLcD-fLOW3iBJ-1">
+          <mxGeometry x="-0.087" y="-10" relative="1" as="geometry">
+            <mxPoint x="663" y="360" as="sourcePoint" />
+            <mxPoint x="570" y="315" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="730" y="360" />
+              <mxPoint x="730" y="360" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
