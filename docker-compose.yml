@@ -1,8 +1,31 @@
 ---
+volumes:
+  keycloak-db-16-data:
+  keycloak-db-16-log:
 services:
+  keycloak-db-16:
+    image: postgres:16-alpine
+    env_file: .env
+    volumes:
+      - keycloak-db-16-data:/var/lib/postgresql/data
+      - keycloak-db-16-log:/var/log/postgresql
+    environment:
+      POSTGRES_DB: ${KC_DB_URL_DATABASE}
+      POSTGRES_USER: ${KC_DB_USERNAME}
+      POSTGRES_PASSWORD: ${KC_DB_PASSWORD}
   keycloak:
-    image: quay.io/keycloak/keycloak:23.0.4
-    ports:
-      - '8080:8080'
-    command: ['start-dev']
-    env_file: './.env'
+    image: keycloak/keycloak:26.0
+    depends_on: [ 'keycloak-db-16' ]
+    ports: [ '8080:8080' ]
+    command: [ 'start-dev' ]
+    env_file: .env
+    environment:
+      JAVA_OPTS_KC_HEAP: '-XX:MaxRAMPercentage=75.0'
+      KC_DB: postgres
+      KC_DB_URL_HOST: keycloak-db-16
+      KC_DB_URL_PORT: 5432
+      KC_DB_SCHEMA: public
+      QUARKUS_TRANSACTION_MANAGER_ENABLE_RECOVERY: true
+    volumes:
+      - ./keycloak.conf:/opt/keycloak/conf/keycloak.conf
+      - ./realm-data:/opt/keycloak/data/import
