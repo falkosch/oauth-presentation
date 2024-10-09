@@ -2,30 +2,62 @@
 volumes:
   keycloak-db-16-data:
   keycloak-db-16-log:
+  pgadmin4-data:
+
 services:
   keycloak-db-16:
     image: postgres:16-alpine
     env_file: .env
+    environment:
+      POSTGRES_DB: keycloak
+      POSTGRES_USER: kcadmin
+      POSTGRES_PASSWORD: ${KC_DB_PASSWORD}
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "kcadmin", "-d", "keycloak"]
+    stop_grace_period: 300s
     volumes:
       - keycloak-db-16-data:/var/lib/postgresql/data
       - keycloak-db-16-log:/var/log/postgresql
+
+  pgadmin4:
+    image: dpage/pgadmin4:8
+    depends_on:
+      - keycloak-db-16
+    env_file: .env
     environment:
-      POSTGRES_DB: ${KC_DB_URL_DATABASE}
-      POSTGRES_USER: ${KC_DB_USERNAME}
-      POSTGRES_PASSWORD: ${KC_DB_PASSWORD}
+      # Not a real email, this is the login username in pgadmin
+      PGADMIN_DEFAULT_EMAIL: "kcadmin@example.com"
+      PGADMIN_DISABLE_POSTFIX: true
+      PGADMIN_LISTEN_PORT: 8104
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "--timeout=2", "http://localhost:8104/misc/ping"]
+    ports: [ '127.0.0.1:8104:8104' ]
+    shm_size: 1
+    stop_grace_period: 60s
+    volumes:
+      - pgadmin4-data:/var/lib/pgadmin
+      - ./pgadmin4-servers.json:/pgadmin4/servers.json
+
   keycloak:
     image: keycloak/keycloak:26.0
-    depends_on: [ 'keycloak-db-16' ]
-    ports: [ '8080:8080' ]
-    command: [ 'start-dev' ]
+    depends_on:
+      keycloak-db-16:
+        condition: service_healthy
+    command: start-dev --import-realm
     env_file: .env
     environment:
       JAVA_OPTS_KC_HEAP: '-XX:MaxRAMPercentage=75.0'
+      KC_BOOTSTRAP_ADMIN_USERNAME: kcadmin
       KC_DB: postgres
       KC_DB_URL_HOST: keycloak-db-16
       KC_DB_URL_PORT: 5432
+      KC_DB_URL_DATABASE: keycloak
+      KC_DB_USERNAME: kcadmin
       KC_DB_SCHEMA: public
       QUARKUS_TRANSACTION_MANAGER_ENABLE_RECOVERY: true
+    ports: [ '127.0.0.1:8080:8080' ]
+    shm_size: 1
+    stop_grace_period: 300s
     volumes:
       - ./keycloak.conf:/opt/keycloak/conf/keycloak.conf
       - ./realm-data:/opt/keycloak/data/import
