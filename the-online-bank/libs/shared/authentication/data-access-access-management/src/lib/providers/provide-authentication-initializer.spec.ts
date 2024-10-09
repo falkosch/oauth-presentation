@@ -13,10 +13,6 @@ describe('provideAuthenticationInitializer', () => {
   let accessTokenServiceMock: AccessTokenService;
   let keycloakServiceMock: KeycloakService;
 
-  beforeEach(() => {
-    jest.spyOn(console, 'error');
-  });
-
   describe('when access token is available', () => {
     const givenAccessToken: AccessToken = {
       encoded: 'test-encoded',
@@ -44,10 +40,6 @@ describe('provideAuthenticationInitializer', () => {
       expect(accessTokenServiceMock.consume).toHaveBeenCalledWith(givenAccessToken);
       expect(accessTokenServiceMock.consume).toHaveBeenCalledTimes(1);
     });
-
-    it('should not log errors', () => {
-      expect(console.error).toHaveBeenCalledTimes(0);
-    });
   });
 
   describe('when access token is null', () => {
@@ -71,10 +63,6 @@ describe('provideAuthenticationInitializer', () => {
     it('should not consume null access token', () => {
       expect(accessTokenServiceMock.consume).toHaveBeenCalledTimes(0);
     });
-
-    it('should not log errors', () => {
-      expect(console.error).toHaveBeenCalledTimes(0);
-    });
   });
 
   describe('when initialization emits an error', () => {
@@ -97,11 +85,6 @@ describe('provideAuthenticationInitializer', () => {
 
     it('should not consume null access token', () => {
       expect(accessTokenServiceMock.consume).toHaveBeenCalledTimes(0);
-    });
-
-    it('should log thrown error', () => {
-      expect(console.error).toHaveBeenCalledWith(new Error('test'));
-      expect(console.error).toHaveBeenCalledTimes(1);
     });
   });
 });

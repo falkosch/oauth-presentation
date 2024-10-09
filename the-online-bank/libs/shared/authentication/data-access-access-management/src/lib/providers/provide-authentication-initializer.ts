@@ -14,10 +14,7 @@ export const provideAuthenticationInitializer = (): FactoryProvider => ({
       filter(Boolean),
       tap((accessToken) => accessTokenService.consume(accessToken)),
       switchMap(() => EMPTY),
-      catchError((e) => {
-        console.error(e);
-        return EMPTY;
-      })
+      catchError(() => EMPTY)
     );
   },
 });

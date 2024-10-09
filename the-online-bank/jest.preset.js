@@ -13,5 +13,5 @@ module.exports = {
   },
   errorOnDeprecated: true,
   resetMocks: true,
-  transformIgnorePatterns: ['node_modules/(?!(.*\\.mjs|@datorama/akita/.+)$)'],
+  transformIgnorePatterns: ['node_modules/(?!(.*\\.mjs|@datorama/akita/.+|keycloak-js/.+)$)'],
 };

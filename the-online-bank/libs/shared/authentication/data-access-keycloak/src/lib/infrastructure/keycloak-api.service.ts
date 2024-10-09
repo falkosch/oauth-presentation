@@ -14,11 +14,16 @@ export class KeycloakApiService {
 
   initialize(): Observable<AccessToken | null> {
     return defer(() =>
-      this.keycloak.init({
-        redirectUri: 'http://localhost:4200/',
-        onLoad: 'check-sso',
-        pkceMethod: 'S256',
-      })
+      this.keycloak
+        .init({
+          redirectUri: 'http://localhost:4200/',
+          onLoad: 'check-sso',
+          pkceMethod: 'S256',
+        })
+        .catch((e: unknown) => {
+          console.error('failed to init keycloak sdk', e);
+          throw new Error('failed to init keycloak sdk', { cause: e });
+        })
     ).pipe(map(() => this.getAccessTokenOrNull()));
   }
 

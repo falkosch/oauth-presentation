@@ -40,6 +40,8 @@ describe('KeycloakApiService', () => {
 
       expect(keycloakMock.init).toHaveBeenCalledWith({
         redirectUri: 'http://localhost:4200/',
+        onLoad: 'check-sso',
+        pkceMethod: 'S256',
       });
       expect(keycloakMock.init).toHaveBeenCalledTimes(1);
     });
@@ -53,6 +55,14 @@ describe('KeycloakApiService', () => {
       keycloakMock.tokenParsed = undefined;
 
       await expect(firstValueFrom(service.initialize())).resolves.toBeNull();
+    });
+
+    it('should passthrough error when keycloak fails to initialize', async () => {
+      jest.spyOn(keycloakMock, 'init').mockRejectedValue(new Error('test'));
+
+      await expect(firstValueFrom(service.initialize())).rejects.toEqual(
+        new Error('failed to init keycloak sdk')
+      );
     });
   });
 
