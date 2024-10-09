@@ -7,7 +7,7 @@
       "Name": "keycloak",
       "Port": 5432,
       "SSLMode": "prefer",
-      "Username": "keycloak"
+      "Username": "kcadmin"
     }
   }
 }
